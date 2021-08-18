@@ -81,34 +81,35 @@ public class ArrayListTask extends ArrayList<Long>{
    	System.out.println("arrayList size:"+len);
    	System.out.println(list.indexOf("nivas"));
    	 }
-	
-	public void stringIterator(){
+
+	public void stringIterator(String[] runs){
 	//Question7
 		ArrayList<String> list= new ArrayList<String>();
 		
-		for(int run=0;run<5;run++){
-		System.out.println("enter   String");
-		String string=input.next();
-		list.add(string);
+		for(int run=0;run<runs.length;run++){
+		//System.out.println("enter   String");
+	//	String string=input.next();
+		list.add(runs[run]);
 		}
         Iterator itr=list.iterator();
 		while(itr.hasNext()){
 		System.out.println("list elements" +itr.next());
       	}
 	    System.out.println("arraylistSize="+list.size());
-	    System.out.println("arraylist="+list);
+	     System.out.println("arraylist="+list);
+
 	}
-	public void printStringGivenIndex(){
+	public void printStringGivenIndex(String []adding){
 	//Question8
 		ArrayList<String> list= new ArrayList<String>();
 		
-		for(int run=0;run<4;run++){
-		System.out.println("enter  one String");
-		String string=input.next();
-		list.add(string);
+		for(int run=0;run<adding.length;run++){
+		//System.out.println("enter  one String");
+		//String string=input.next();
+		list.add(adding[run]);
 		}
-		//int print =list.indexOf(4);
-		System.out.println("please enter the index");
+		int print =list.indexOf(4);
+	System.out.println("please enter the index");
 		int index=input.nextInt();
           
                 System.out.println("print the string  ="+list.get(index));	
@@ -116,27 +117,27 @@ public class ArrayListTask extends ArrayList<Long>{
 	        System.out.println("arraylist="+list);
 	}
 	
-       public void findIndexOfDuplicate(){
+       public void findIndexOfDuplicate(String[] duplicate){
        //Question9 doubts
          ArrayList<String> list=new ArrayList<String>();
          
-          for(int run=0; run<5; run++){
-          System.out.println("please enter the five String");
-          String name=input.next();
-          list.add(name);
+          for(int run=0; run<duplicate.length; run++){
+          //System.out.println("please enter the five String");
+       //   String name=input.next();
+          list.add(duplicate[run]);
           }
-          list.indexOf("nivas");
-          list.lastIndexOf("nivas");
+        System.out.println(  list.indexOf("nivas"));
+       System.out.println(   list.lastIndexOf("nivas"));
           }
           
-	public void addingSecondPosition(){
+	public void addingSecondPosition(String [] added){
 	//Question10
 	
 	 ArrayList<String> list=new ArrayList<String>();
-	 for(int run=0; run<5;run++){
-	 System.out.println("enter the string");
-	 String string=input.nextLine();
-	 list.add(string);
+	 for(int run=0; run<added.length;run++){
+	// System.out.println("enter the string");
+	// String string=input.nextLine();
+	 list.add(added[run]);
 	 }
 	 System.out.println("enter the one string");
 	 String add=input.next();
@@ -148,37 +149,37 @@ public class ArrayListTask extends ArrayList<Long>{
 	 
 	  }
 	  
-	public void createSecondArrayList(){
+	public void createSecondArrayList(String[] value){
 	//Question11
    
 	ArrayList<String> list=new ArrayList<String>();
-	for(int run=0;run<10;run++){
-	System.out.println("please enter the 10 string");
-	String string=input.next();
-	list.add(string);
+	for(int run=0;run<value.length;run++){
+	//System.out.println("please enter the 10 string");
+	//String string=input.next();
+	list.add(value[run]);
 	}
 	
 	List<String> listTwo=new ArrayList<String>();
 	listTwo=list.subList(3,8);
-	//list.add(in);
+	//list.add(in);s
         System.out.println(listTwo);
         }
         
 
-        public void createThirdArrayList(){
+        public void createThirdArrayList(String[] valueOne,String[] valueTwo){
         //Question12
 	ArrayList<String> list=new ArrayList<String>();
-	for(int run=0; run<3;run++){
-	System.out.println("Enter the five String");
-	String string =input.next();
-	list.add(string);
+	for(int run=0; run<valueOne.length;run++){
+	//System.out.println("Enter the five String");
+	//String string =input.next();
+	list.add(valueOne[run]);
 	}
 	
 	ArrayList<String> listTwo=new ArrayList<String>();
-	for(int run=0; run<5;run++){
-	System.out.println("Enter the three String");
-	String two =input.next();
-	listTwo.add(two);
+	for(int run=0; run<valueTwo.length;run++){
+	//System.out.println("Enter the three String");
+//	String two =input.next();
+	listTwo.add(valueTwo[run]);
 	}
 	
 	ArrayList<String> listThree=new ArrayList<String>();
@@ -190,20 +191,20 @@ public class ArrayListTask extends ArrayList<Long>{
        }
        
 	
-	public void createThirdListUseAboveList(){
+	public void createThirdListUseAboveList(String [] one, String[] two){
 	//Question13
 	ArrayList<String> list=new ArrayList<String>();
-	for(int run=0; run<5;run++){
-	System.out.println("Enter the five name");
-	String name=input.next();
-	list.add(name);
+	for(int run=0; run<one.length;run++){
+	//System.out.println("Enter the five name");
+	//String name=input.next();
+	list.add(one[run]);
 	}
 	
 	ArrayList<String> listTwo=new ArrayList<String>();
-	for(int run=0; run<3;run++){
-	System.out.println("Enter the three name");
-	String nameTwo =input.next();
-	listTwo.add(nameTwo);
+	for(int run=0; run<two.length;run++){
+	//System.out.println("Enter the three name");
+	//String nameTwo =input.next();
+	listTwo.add(two[run]);
 	}
 	
 	ArrayList<String> listThree=new ArrayList<String>();
@@ -216,15 +217,15 @@ public class ArrayListTask extends ArrayList<Long>{
 	System.out.println("arrrayList size"+len);
        }	
        
-	public void removeDecimalValue(){
+	public void removeDecimalValue(Double[] first){
 	//Question14
 	 ArrayList<Double> list=new ArrayList<Double>();
 	 Scanner input=new Scanner(System.in);
-	 for(int run=0; run<5; run++){ 
+	 for(int run=0; run<first.length; run++){ 
 	 try{
-	 System.out.println("print the value");
-	 double value=input.nextDouble();
-	  list.add(value);
+	// System.out.println("print the value");
+	 //double value=input.nextDouble();
+	  list.add(first[run]);
 	  }
 	 
 	  catch(InputMismatchException e){
@@ -249,13 +250,13 @@ public class ArrayListTask extends ArrayList<Long>{
 	  System.out.println("size of array list="+len);
 	  }
         
-	public void removeForthDecimalValue(){
+	public void removeForthDecimalValue(Double[] second){
 	//Question15
 	ArrayList<Double> list =new ArrayList<Double>();
-	for(int i=0; i<5; i++){
-	System.out.println("enter the value");
-	double value=input.nextDouble();
-	list.add(value);
+	for(int run=0; run<second.length; run++){
+	   //System.out.println("enter the value");
+	  //ssdouble value=input.nextDouble();
+	list.add(second[run]);
 	}
 	
      System.out.println("removed element"+ list.remove(3));
@@ -263,13 +264,13 @@ public class ArrayListTask extends ArrayList<Long>{
       int len=list.size();
       System.out.println("size of arrayList="+len);
       }
-      public void removeLongValue(){
+      public void removeLongValue(Long[] third){
       //Question16
        ArrayListTask list=new ArrayListTask();
-       for(int i=0; i<10;i++){
-       System.out.println("enter the long value");
-       Long in=input.nextLong();
-       list.add(in);
+       for(int run=0; run<third.length;run++){
+      // System.out.println("enter the long value");
+    //   Long in=input.nextLong();
+       list.add(third[run]);
       }
       list.removeRange(4,8);
      
@@ -277,39 +278,42 @@ public class ArrayListTask extends ArrayList<Long>{
       System.out.println("Arraylist size"+len);
       System.out.println("Arraylist"+list);
      }     
-    public  void removeElementFromFirst(){
+    public ArrayList<String> removeElementFromFirst(String[] firstValue,String[] secondValue){
+		//Question17
       ArrayList<String> list= new ArrayList<String>();
-      for(int i=0; i<5; i++){
-      System.out.println("enter name to first");
-      String name=input.next();
-      list.add(name);
+      for(int run=0; run<firstValue.length; run++){
+     // System.out.println("enter name to first");
+      //String name=input.next();
+      list.add(firstValue[run]);
     }
    
    ArrayList<String> listTwo= new ArrayList<String>();
-    for(int i=0; i<3; i++){
-    System.out.println("enter name second");
-    String name=input.next();
-    listTwo.add(name);
+    for(int run=0; run<secondValue.length; run++){
+   
+  ///System.out.println("enter name second");
+  //  String name=input.next();
+    listTwo.add(secondValue[run]);
     }
     list.removeAll(listTwo);
-    System.out.println("arrayList"+list);
-    int len=list.size();
-    System.out.println("size of Array list"+len);
+    //System.out.println("arrayList"+list);
+   // int len=list.size();
+    //System.out.println("size of Array list"+len);
+	return list;
     }
      
-    public  void  removeValueNotPresent(){
+    public  void  removeValueNotPresent(String[] numOne,String[] numTwo){
    //Question18
     ArrayList<String> firstList= new ArrayList<String>();
-    for(int i=0; i<5; i++){
-    System.out.println("enter name to first");
-    String name=input.next();
-   firstList.add(name);
+    for(int run=0; run<5; run++){
+    //System.out.println("enter name to first");
+   // String name=input.next();
+   firstList.add(numOne[run]);
     }
    ArrayList<String> secondList= new ArrayList<String>();
-    for(int i=0; i<3; i++){
-    System.out.println("enter name second");
-    String name=input.next();
-    secondList.add(name);
+    for(int run=0; run<3; run++){
+   // System.out.println("enter name second");
+   // String name=input.next();
+    secondList.add(numTwo[run]);
     }
     firstList.retainAll(secondList);
     System.out.println("arrayList"+firstList);
@@ -318,7 +322,7 @@ public class ArrayListTask extends ArrayList<Long>{
     System.out.println("arrayList"+secondList);
     int length=secondList.size();
      System.out.println("size of second  Array list"+len);
-    }
+	}
     
       
  	public void removeAllLongValues(){
@@ -439,73 +443,215 @@ public class ArrayListTask extends ArrayList<Long>{
               
               
                 case 7:
-                   obj.stringIterator();
+				      System.out.println("how much string you need");
+                      count=input.nextInt();
+                      String runs[]=new String [count];
+                      System.out.println("enter the " + count+"string");
+                      for(int run=0;  run<count; run++){
+                      runs[run]=input.next();
+                      }
+				
+                    obj.stringIterator(runs);
+				  // System.out.println("arraylist="+list);
                    System.out.println(" successfully");
                 break;
               
               
                 case 8:
-                   obj.printStringGivenIndex();
+				       System.out.println("how much string you need");
+                      count=input.nextInt();
+                      String adding[]=new String [count];
+                      System.out.println("enter the " + count+"string");
+                      for(int run=0;  run<count; run++){
+                      adding[run]=input.next();
+                      }
+				  //System.out.println("please enter the index");
+	             	//int index=input.nextInt();
+                   obj.printStringGivenIndex(adding);
                    System.out.println(" successfully");
                 break;
               
               
                 case 9:
-                   obj. findIndexOfDuplicate();
+				
+				    
+				      System.out.println("how much string you need");
+                      count=input.nextInt();
+                      String duplicate[]=new String [count];
+                      System.out.println("enter the " + count+"string");
+                      for(int run=0;  run<count; run++){
+                      duplicate[run]=input.next();
+                      }
+                   obj. findIndexOfDuplicate(duplicate);
                    System.out.println(" successfully");
                 break;
               
               
                 case 10:
-                   obj.addingSecondPosition();
+				    
+				      System.out.println("how much string you need");
+                      count=input.nextInt();
+                      String added[]=new String [count];
+                      System.out.println("enter the " + count+"string");
+                      for(int run=0;  run<count; run++){
+                      added[run]=input.next();
+				
+					  }
+                   obj.addingSecondPosition(added);
                    System.out.println(" successfully");
                 break;
               
               
                 case 11:
-                   obj.createSecondArrayList();
+				
+				  
+				      System.out.println("how much string you need");
+                      count=input.nextInt();
+                      String value[]=new String [count];
+                      System.out.println("enter the " + count+"string");
+                      for(int run=0;  run<count; run++){
+                      value[run]=input.next();
+				
+					  }
+                   obj.createSecondArrayList(value);
                    System.out.println(" successfully");
                 break;
               
               
                 case 12:
-                   obj.createThirdArrayList();
+				
+				  
+				      System.out.println("how much string you need");
+                      count=input.nextInt();
+                      String valueOne[]=new String [count];
+                      System.out.println("enter the " + count+"string");
+                      for(int run=0;  run<count; run++){
+                      valueOne[run]=input.next();
+				
+					  }	  
+				      System.out.println("how much string you need list two");
+                      count=input.nextInt();
+                      String valueTwo[]=new String [count];
+                      System.out.println("enter the " + count+"string");
+                      for(int run=0;  run<count; run++){
+                      valueTwo[run]=input.next();
+				
+					  }
+                   obj.createThirdArrayList(valueOne, valueTwo);
                    System.out.println(" successfully");
                 break;
               
               
                 case 13:
-                   obj.createThirdListUseAboveList();
+				
+				
+				      System.out.println("how much string you need");
+                      count=input.nextInt();
+                      String one[]=new String [count];
+                      System.out.println("enter the " + count+"string");
+                      for(int run=0;  run<count; run++){
+                      one[run]=input.next();
+				
+					  }	  
+				      System.out.println("how much string you need list two");
+                      count=input.nextInt();
+                      String two[]=new String [count];
+                      System.out.println("enter the " + count+"string");
+                      for(int run=0;  run<count; run++){
+                      two[run]=input.next();
+				
+					  }
+                   obj.createThirdListUseAboveList(one, two);
                    System.out.println(" successfully");
                 break;
               
               
                 case 14:
-                   obj.removeDecimalValue();
+				
+				
+				      System.out.println("how much decimal value you need");
+                      count=input.nextInt();
+                     Double first[]=new Double [count];
+                      System.out.println("enter the " + count+"string");
+                      for(int run=0;  run<count; run++){
+                      first[run]=input.nextDouble();
+					  }
+                   obj.removeDecimalValue(first);
                   System.out.println(" successfully");
                 break;
               
               
                 case 15:
-                   obj.removeForthDecimalValue();
+				
+				      System.out.println("how much decimal value you need");
+                      count=input.nextInt();
+                      Double second[]=new Double [count];
+                      System.out.println("enter the " + count+"string");
+                      for(int run=0;  run<count; run++){
+                      second[run]=input.nextDouble() ; 
+					  }
+                   obj.removeForthDecimalValue(second);
                    System.out.println(" successfully");
                 break;
               
               
                 case 16:
-                   obj.removeLongValue();
+				
+				      System.out.println("how much decimal value you need");
+                      count=input.nextInt();
+                      Long third[]=new  Long [count];
+                      System.out.println("enter the " + count+"string");
+                      for(int run=0;  run<count; run++){
+                      third[run]=input.nextLong() ; 
+					  }
+                   obj.removeLongValue(third);
                    System.out.println(" successfully");
                 break;
               
               
                 case 17:
-                   obj.removeElementFromFirst();
+								
+				      System.out.println(" Enter the number of values : ");
+                      count=input.nextInt();
+                      String firstValue[]=new  String[count];
+                      System.out.println("enter the " + count+"string");
+                      for(int run=0;  run<count; run++){
+                      firstValue[run]=input.next() ; 
+					  }
+					  System.out.println("how much decimal value you need list two");
+                      count=input.nextInt();
+                      String secondValue[]=new String[count];
+                      System.out.println("enter the " + count+"string");
+                      for(int run=0;  run<count; run++){
+                      secondValue[run]=input.next() ; 
+					  }
+				
+  			ArrayList<String> list=	 obj.removeElementFromFirst(firstValue,secondValue);
+			    int len=list.size();
+				System.out.println("arraylist ="+list);
+				System.out.println("arraylist size="+len);
+				 
                    System.out.println(" successfully");
                 break;
               
               
                 case 18:
-                   obj.removeValueNotPresent();
+							
+				      System.out.println(" Enter the number of values : ");
+                      count=input.nextInt();
+                      String numOne[]=new  String[count];
+                      System.out.println("enter the " + count+"string");
+                      for(int run=0;  run<count; run++){
+                      numOne[run]=input.next() ; 
+					  }
+					  System.out.println("Enter the number of values ");
+                      count=input.nextInt();
+                      String numTwo[]=new String[count];
+                      System.out.println("enter the " + count+"string");
+                      for(int run=0;  run<count; run++){
+                      numTwo[run]=input.next() ; 
+					  }
+                   obj.removeValueNotPresent(numOne, numTwo);
                    System.out.println(" successfully");
                 break;
               
@@ -520,7 +666,7 @@ public class ArrayListTask extends ArrayList<Long>{
                 String[] name = new String[5];
                 System.out.println("enter 5 strings");
                 for(int i=0; i<5; i++){
-        	name [i]=input.next();
+        	    name [i]=input.next();
         	}
         	System.out.println("enter strings to find List");
         	String checkName=input.next();
@@ -531,6 +677,7 @@ public class ArrayListTask extends ArrayList<Long>{
            }      
 	 }
 	}
+	
 	
 	
 	
